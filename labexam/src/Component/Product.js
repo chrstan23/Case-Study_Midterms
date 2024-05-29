@@ -60,6 +60,8 @@ function Product({ summary, setSummary }) {
 
   return (
     <div className="mt-5 mb-5 container">
+
+      
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
         {products.map(product => (
           <div key={product.id} className="col mb-4">
