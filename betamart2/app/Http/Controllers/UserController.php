@@ -57,14 +57,4 @@ class UserController extends Controller
         return response()->json(['message' => 'User removed successfully']);
     }
 
-    public function login(Request $request)
-    {
-        $user = User::where('username', $request->username)->first();
-
-        if (!$user || !Hash::check($request->password, $user->password)) {
-            return response()->json(['message' => 'Invalid credentials'], 401);
-        }
-
-        return response()->json(['user' => $user]);
-    }
 }
